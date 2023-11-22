@@ -28,6 +28,7 @@ If you really love the tool (or any others), or they helped you find an awesome 
 ## TODO
 
 - Implement a "CLEAR" button.
+- Implement a "Export to CSV" button.
 
 ## Advisory
 
