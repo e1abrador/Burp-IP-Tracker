@@ -6,11 +6,11 @@
 
 Go to the Extensions -> Installed -> Add -> iptracker.py
 
-### Why?
+## Why?
 
 Usually in a red team engagement it is needed to log all IP addresses used in the exercise. By using this extension, Burp will log all IP addresses used automatically, so the auditor can focus on testing and stop caring about what IP address he has used.
 
-### Using
+## Using
 
 Once the extension is loaded, it will start logging your IP address:
 
