@@ -13,7 +13,7 @@ import java.awt.event.ActionListener as ActionListener
 class BurpExtender(IBurpExtender, ITab):
     def registerExtenderCallbacks(self, callbacks):
         self.callbacks = callbacks
-        self.callbacks.setExtensionName("IP Logger")
+        self.callbacks.setExtensionName("IP Tracker")
         self.ui = IPLoggerUI()
         self.callbacks.addSuiteTab(self)
 
