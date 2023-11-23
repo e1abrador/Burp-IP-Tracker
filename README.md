@@ -21,8 +21,8 @@ It will show the IP Address used + the first and last time the IP was detected.
 By default the extension will not save the IP logs, so you will need to save the logs in a .txt format and when you open back Burp load them from that .txt file.
 In case is the end of the exercise, you can export the logs as a CSV file and format the .csv as a table in an easy way.
 
-If you have any idea: https://github.com/e1abrador/Burp-IP-Tracker/pulls
-If you have any issue with the extension: https://github.com/e1abrador/Burp-IP-Tracker/issues
+<p>If you have any idea: https://github.com/e1abrador/Burp-IP-Tracker/pulls</p>
+<p>If you have any issue with the extension: https://github.com/e1abrador/Burp-IP-Tracker/issues</p>
 
 Good luck and good hunting!
 If you really love the tool (or any others), or they helped you find an awesome bounty, consider [BUYING ME A COFFEE!](https://www.buymeacoffee.com/e1abrador) ☕ (I could use the caffeine!)
