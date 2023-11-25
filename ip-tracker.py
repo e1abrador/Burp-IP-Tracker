@@ -1,13 +1,14 @@
-from burp import IBurpExtender, ITab
-from javax.swing import JPanel, JTable, JScrollPane, BoxLayout, JButton, JFileChooser, Timer
-from javax.swing.table import DefaultTableModel
-from java.awt.event import ActionListener
-from java.io import File, FileWriter, FileReader, BufferedReader, InputStreamReader
 import java.awt.Dimension as Dimension
 import java.lang.System as System
-import java.util.Date as Date
-import java.text.SimpleDateFormat as SimpleDateFormat
 import java.net.URL as URL
+import java.text.SimpleDateFormat as SimpleDateFormat
+import java.util.Date as Date
+from burp import IBurpExtender, ITab
+from java.awt.event import ActionListener
+from java.io import FileWriter, FileReader, BufferedReader, InputStreamReader
+from javax.swing import JPanel, JTable, JScrollPane, BoxLayout, JButton, JFileChooser, Timer
+from javax.swing.table import DefaultTableModel
+
 
 class BurpExtender(IBurpExtender, ITab):
     def registerExtenderCallbacks(self, callbacks):
@@ -21,6 +22,7 @@ class BurpExtender(IBurpExtender, ITab):
 
     def getUiComponent(self):
         return self.ui.panel
+
 
 class IPLoggerUI:
     def __init__(self):
@@ -105,14 +107,14 @@ class IPLoggerUI:
         try:
             writer = FileWriter(file)
             for row in range(self.model.getRowCount()):
-                line = []
-                for col in range(self.model.getColumnCount()):
-                    line.append(str(self.model.getValueAt(row, col)))
+                line = [
+                    str(self.model.getValueAt(row, col))
+                    for col in range(self.model.getColumnCount())
+                ]
                 writer.write(",".join(line) + "\n")
             writer.close()
         except Exception as e:
             print("Error writing to CSV file:", e)
-
 
     def log_current_ip(self):
         try:
@@ -133,6 +135,7 @@ class IPLoggerUI:
 
         except Exception as e:
             self.model.addRow(["Error fetching IP", str(e), ""])
+
 
 class IPCheckAction(ActionListener):
     def __init__(self, ipLoggerUI):
